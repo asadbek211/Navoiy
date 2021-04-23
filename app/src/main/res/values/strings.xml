@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Alisher Navoiy</string>
+    <string name="hayoti_ijodi">Hayoti va ijodi</string>
+    <string name="gazallari">G\'azallari</string>
+    <string name="ruboiy_va_tuyuqlari">Ruboiy va tuyuqlari</string>
+    <string name="lison_ut_tayr">Lison Ut-Tayr(Qush tili)</string>
+    <string name="xamsa_asari">Xamsa asari</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
