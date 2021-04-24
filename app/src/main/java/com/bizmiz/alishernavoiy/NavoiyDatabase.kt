@@ -10,12 +10,15 @@ import com.bizmiz.alishernavoiy.data.models.Navoiy
 @Database(entities = [Navoiy::class], version = 1)
 abstract class NavoiyDatabase : RoomDatabase() {
     companion object {
-        private lateinit var INSTANCE: NavoiyDatabase
-        fun getInstanse(context: Context): NavoiyDatabase =
-                Room.databaseBuilder(
-                        context, NavoiyDatabase::class.java, "navoiy.db"
-                ).allowMainThreadQueries().createFromAsset("navoiy.db").build()
+         lateinit var INSTANCE: NavoiyDatabase
+        fun getInstance(context: Context): NavoiyDatabase {
+           if (!::INSTANCE.isInitialized) {
+               INSTANCE = Room.databaseBuilder(
+                   context, NavoiyDatabase::class.java, "navoiy.db"
+               ).allowMainThreadQueries().createFromAsset("navoiy.db").build()
+           }
+           return INSTANCE
+           }
     }
-
     abstract fun dao(): NavoiyDao
 }
