@@ -16,7 +16,7 @@ class HayotiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_hayoti, container, false)
-        view.hayoti_ijodi.text = NavoiyDatabase.getInstanse(requireContext()).dao().getId1().qiymat
+        view.hayoti_ijodi.text = NavoiyDatabase.getInstance(requireContext()).dao().getId1().qiymat
         view.back.setOnClickListener { requireActivity().finish() }
         return view
 
