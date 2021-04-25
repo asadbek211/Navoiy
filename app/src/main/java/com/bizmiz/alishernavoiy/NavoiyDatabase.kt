@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.bizmiz.alishernavoiy.data.dao.NavoiyDao
-import com.bizmiz.alishernavoiy.data.models.Navoiy
+import com.bizmiz.alishernavoiy.data.model.Navoiy
 
 @Database(entities = [Navoiy::class], version = 1)
 abstract class NavoiyDatabase : RoomDatabase() {

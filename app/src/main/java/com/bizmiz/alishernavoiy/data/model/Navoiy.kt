@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.data.models
+package com.bizmiz.alishernavoiy.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

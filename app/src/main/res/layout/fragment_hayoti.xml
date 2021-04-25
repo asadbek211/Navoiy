@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/fon_rangi"
-    android:layout_height="match_parent"
-    tools:context=".Hayoti">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -57,6 +56,7 @@
 
             android:orientation="vertical" >
             <TextView
+                android:textIsSelectable="true"
                 android:id="@+id/hayoti_ijodi"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/black"
