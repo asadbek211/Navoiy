@@ -96,6 +96,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt1"
@@ -140,6 +141,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginStart="20dp"
@@ -183,6 +185,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt3"
@@ -226,6 +229,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt4"
@@ -269,6 +273,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt5"
@@ -312,6 +317,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt6"
@@ -355,6 +361,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:id="@+id/txt7"
@@ -398,6 +405,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -437,6 +445,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -472,6 +481,7 @@
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -506,6 +516,7 @@
                     android:textSize="15sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -541,6 +552,7 @@
                     android:textSize="15sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -576,6 +588,7 @@
                     android:textSize="15sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
@@ -611,6 +624,7 @@
                     android:textSize="15sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
+                    android:textIsSelectable="true"
                     android:textColor="@color/black"
                     android:visibility="gone"
                     android:layout_marginBottom="10dp"
