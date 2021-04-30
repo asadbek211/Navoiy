@@ -88,7 +88,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/g_urbatda_g_arib"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/ko_z_birla_qoshing_yaxshi"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -177,7 +177,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/gar_oshiq_esang"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +221,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/zohid_senga"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -265,7 +265,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/umri_aziz"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -309,7 +309,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/xushluq"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt6"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -353,7 +353,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/jonimdagi_jim"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -397,7 +397,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/o_pay"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/txt8"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -441,7 +441,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/yo_q_dahrda_bir_besar_u_sorson_mendek"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
@@ -477,7 +477,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/yo_labmudur"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
@@ -513,7 +513,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/bormog_in"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
                     android:textIsSelectable="true"
@@ -549,7 +549,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/olmangiz"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
                     android:textIsSelectable="true"
@@ -585,7 +585,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/yoqilur"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
                     android:textIsSelectable="true"
@@ -621,7 +621,7 @@
                     android:paddingEnd="10dp"
                     android:text="@string/olmani_otti_nigorim"
                     android:textColor="@color/fon_rangi2"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:ignore="RtlSymmetry" />
                 <TextView
                     android:textIsSelectable="true"

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/fon_rangi">
+    android:background="@color/fon_rangi"
+    android:layout_height="match_parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -15,12 +17,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-
-            android:id="@+id/title_hayoti"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="@string/hayoti_ijodi"
+            android:text="@string/gazallari"
             android:textColor="@color/fon_rangi"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -28,29 +29,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/btnMinus"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:padding="8dp"
-            android:src="@drawable/minus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/btnPlus"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:padding="8dp"
-            android:src="@drawable/plus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnMinus"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
         <Button
-            android:id="@+id/back"
+            android:id="@+id/ortga"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
@@ -60,10 +40,43 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/title_hayoti"
+            app:layout_constraintStart_toStartOf="@+id/title"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ImageView
+            android:layout_marginEnd="5dp"
+            android:id="@+id/btnMinus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:src="@drawable/minus"
+            app:layout_constraintEnd_toStartOf="@+id/qoshiq"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnPlus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:src="@drawable/plus"
+            app:layout_constraintEnd_toStartOf="@id/btnMinus"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ortga"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_marginEnd="8dp"
+            android:id="@+id/qoshiq"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/library_music"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -71,27 +84,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:orientation="vertical">
-
+            android:orientation="vertical" >
             <TextView
-                android:textIsSelectable="true"
-                android:id="@+id/hayoti_ijodi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="15dp"
+                android:id="@+id/gazal_matni"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:gravity="clip_horizontal"
+                android:background="@drawable/shape"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/shape"
-                android:gravity="clip_horizontal"
-                android:padding="10dp"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:layout_marginStart="15dp"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
     </ScrollView>
 
