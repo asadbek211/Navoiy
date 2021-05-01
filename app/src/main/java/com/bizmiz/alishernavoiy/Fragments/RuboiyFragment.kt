@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.bizmiz.alishernavoiy.NavoiyDatabase
@@ -50,550 +52,553 @@ class RuboiyFragment : Fragment() {
             requireActivity().finish()
         }
         view.btn1.setOnClickListener {
-            btn1OnClickListener(view)
+            btnOnClickListener(ok1,view.txt1, view.btn1)
         }
         view.btn2.setOnClickListener {
-            btn2OnClickListener(view)
+            btnOnClickListener(ok2,view.txt2, view.btn2)
         }
         view.btn3.setOnClickListener {
-            btn3OnClickListener(view)
+            btnOnClickListener(ok3,view.txt3, view.btn3)
         }
         view.btn4.setOnClickListener {
-            btn4OnClickListener(view)
+            btnOnClickListener(ok4,view.txt4, view.btn4)
         }
         view.btn5.setOnClickListener {
-            btn5OnClickListener(view)
+            btnOnClickListener(ok5,view.txt5, view.btn5)
         }
         view.btn6.setOnClickListener {
-            btn6OnClickListener(view)
+            btnOnClickListener(ok6,view.txt6, view.btn6)
         }
         view.btn7.setOnClickListener {
-            btn7OnClickListener(view)
+            btnOnClickListener(ok7,view.txt7, view.btn7)
         }
         view.btn8.setOnClickListener {
-            btn8OnClickListener(view)
+            btnOnClickListener(ok8,view.txt8, view.btn8)
         }
         view.btn9.setOnClickListener {
-            btn9OnClickListener(view)
+            btnOnClickListener(ok9,view.txt9, view.btn9)
         }
         view.btn10.setOnClickListener {
-            btn10OnClickListener(view)
+            btnOnClickListener(ok10,view.txt10, view.btn10)
         }
         view.btn11.setOnClickListener {
-            btn11OnClickListener(view)
+            btnOnClickListener(ok11,view.txt11, view.btn11)
         }
         view.btn12.setOnClickListener {
-            btn12OnClickListener(view)
+            btnOnClickListener(ok12,view.txt12, view.btn12)
         }
         view.btn13.setOnClickListener {
-            btn13OnClickListener(view)
+            btnOnClickListener(ok13,view.txt13, view.btn13)
         }
         view.btn14.setOnClickListener {
-            btn14OnClickListener(view)
+            btnOnClickListener(ok14,view.txt14, view.btn14)
         }
         return view
     }
-    private fun btn1OnClickListener(view: View){
-        if (!ok1) {
-            view.txt1.visibility = View.VISIBLE
-            view.btn1.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn1.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok1 = true
-        } else {
-            txt1.visibility = View.GONE
-            btn1.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn1.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok1 = false
-        }
 
-    }
-    private fun btn2OnClickListener(view: View){
-        if (!ok2) {
-            view.txt2.visibility = View.VISIBLE
-            view.btn2.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn2.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok2 = true
-        } else {
-            txt2.visibility = View.GONE
-            btn2.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn2.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok2 = false
-        }
+//    private fun btn1OnClickListener(view: View) {
+//        if (!ok1) {
+//            view.txt1.visibility = View.VISIBLE
+//            view.btn1.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn1.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok1 = true
+//        } else {
+//            txt1.visibility = View.GONE
+//            btn1.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn1.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok1 = false
+//        }
+//
+//    }
+//
+//    private fun btn2OnClickListener(view: View) {
+//        if (!ok2) {
+//            view.txt2.visibility = View.VISIBLE
+//            view.btn2.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn2.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok2 = true
+//        } else {
+//            txt2.visibility = View.GONE
+//            btn2.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn2.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok2 = false
+//        }
+//
+//    }
+//
+//    private fun btn3OnClickListener(view: View) {
+//        if (!ok3) {
+//            view.txt3.visibility = View.VISIBLE
+//            view.btn3.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn3.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok3 = true
+//        } else {
+//            txt3.visibility = View.GONE
+//            btn3.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn3.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok3 = false
+//        }
+//
+//    }
+//
+//    private fun btn4OnClickListener(view: View) {
+//        if (!ok4) {
+//            view.txt4.visibility = View.VISIBLE
+//            view.btn4.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn4.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok4 = true
+//        } else {
+//            txt4.visibility = View.GONE
+//            btn4.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn4.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok4 = false
+//        }
+//
+//    }
+//
+//    private fun btn5OnClickListener(view: View) {
+//        if (!ok5) {
+//            view.txt5.visibility = View.VISIBLE
+//            view.btn5.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn5.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok5 = true
+//        } else {
+//            txt5.visibility = View.GONE
+//            btn5.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn5.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok5 = false
+//        }
+//
+//    }
+//
+//    private fun btn6OnClickListener(view: View) {
+//        if (!ok6) {
+//            view.txt6.visibility = View.VISIBLE
+//            view.btn6.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn6.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok6 = true
+//        } else {
+//            txt6.visibility = View.GONE
+//            btn6.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn6.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok6 = false
+//        }
+//
+//    }
+//
+//    private fun btn7OnClickListener(view: View) {
+//        if (!ok7) {
+//            view.txt7.visibility = View.VISIBLE
+//            view.btn7.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn7.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok7 = true
+//        } else {
+//            txt7.visibility = View.GONE
+//            btn7.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn7.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok7 = false
+//        }
+//
+//    }
+//
+//    private fun btn8OnClickListener(view: View) {
+//        if (!ok8) {
+//            view.txt8.visibility = View.VISIBLE
+//            view.btn8.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn8.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok8 = true
+//        } else {
+//            txt8.visibility = View.GONE
+//            btn8.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn8.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok8 = false
+//        }
+//
+//    }
+//
+//    private fun btn9OnClickListener(view: View) {
+//        if (!ok9) {
+//            view.txt9.visibility = View.VISIBLE
+//            view.btn9.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.icon,
+//                resources.newTheme()
+//            )
+//            btn9.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok9 = true
+//        } else {
+//            txt9.visibility = View.GONE
+//            btn9.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn9.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok9 = false
+//        }
+//
+//    }
+//
+//    private fun btn10OnClickListener(view: View) {
+//        if (!ok10) {
+//            view.txt10.visibility = View.VISIBLE
+//            view.btn10.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tuyuq,
+//                resources.newTheme()
+//            )
+//            btn10.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok10 = true
+//        } else {
+//            txt10.visibility = View.GONE
+//            btn10.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn10.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok10 = false
+//        }
+//
+//    }
+//
+//    private fun btn11OnClickListener(view: View) {
+//        if (!ok11) {
+//            view.txt11.visibility = View.VISIBLE
+//            view.btn11.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tuyuq,
+//                resources.newTheme()
+//            )
+//            btn11.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok11 = true
+//        } else {
+//            txt11.visibility = View.GONE
+//            btn11.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn11.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok11 = false
+//        }
+//
+//    }
+//
+//    private fun btn12OnClickListener(view: View) {
+//        if (!ok12) {
+//            view.txt12.visibility = View.VISIBLE
+//            view.btn12.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tuyuq,
+//                resources.newTheme()
+//            )
+//            btn12.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok12 = true
+//        } else {
+//            txt12.visibility = View.GONE
+//            btn12.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn12.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok12 = false
+//        }
+//
+//    }
+//
+//    private fun btn13OnClickListener(view: View) {
+//        if (!ok13) {
+//            view.txt13.visibility = View.VISIBLE
+//            view.btn13.setBackgroundResource(R.drawable.shape_knopka4)
+//            val drawable1 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tepaga,
+//                resources.newTheme()
+//            )
+//            val drawable2 = VectorDrawableCompat.create(
+//                resources,
+//                R.drawable.tuyuq,
+//                resources.newTheme()
+//            )
+//            btn13.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                drawable2,
+//                null,
+//                drawable1,
+//                null
+//            )
+//            ok13 = true
+//        } else {
+//            txt13.visibility = View.GONE
+//            btn13.setBackgroundResource(R.drawable.shape_knopka3)
+//            val drawable =
+//                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
+//            btn13.setCompoundDrawablesRelativeWithIntrinsicBounds(
+//                null,
+//                null,
+//                drawable,
+//                null
+//            )
+//            ok13 = false
+//        }
+//
+//    }
 
-    }
-    private fun btn3OnClickListener(view: View){
-        if (!ok3) {
-            view.txt3.visibility = View.VISIBLE
-            view.btn3.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn3.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok3 = true
+    private fun btnOnClickListener(boolean: Boolean,textView: TextView, button: Button) {
+        if (!boolean) {
+            textView.visibility = View.VISIBLE
+            button.setBackgroundResource(R.drawable.shape_knopka4)
+            val drawable1 =
+                VectorDrawableCompat.create(resources, R.drawable.tepaga, resources.newTheme())
+            val drawable2 =
+                VectorDrawableCompat.create(resources, R.drawable.tuyuq, resources.newTheme())
+            button.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable2, null, drawable1, null)
+            boolean = true
         } else {
-            txt3.visibility = View.GONE
-            btn3.setBackgroundResource(R.drawable.shape_knopka3)
+            textView.visibility = View.GONE
+            button.setBackgroundResource(R.drawable.shape_knopka3)
             val drawable =
                 VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn3.setCompoundDrawablesRelativeWithIntrinsicBounds(
+            button.setCompoundDrawablesRelativeWithIntrinsicBounds(
                 null,
                 null,
                 drawable,
                 null
             )
-            ok3 = false
-        }
-
-    }
-    private fun btn4OnClickListener(view: View){
-        if (!ok4) {
-            view.txt4.visibility = View.VISIBLE
-            view.btn4.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn4.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok4 = true
-        } else {
-            txt4.visibility = View.GONE
-            btn4.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn4.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok4 = false
-        }
-
-    }
-    private fun btn5OnClickListener(view: View){
-        if (!ok5){
-            view.txt5.visibility = View.VISIBLE
-            view.btn5.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn5.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok5 = true
-        } else {
-            txt5.visibility = View.GONE
-            btn5.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn5.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok5 = false
-        }
-
-    }
-    private fun btn6OnClickListener(view: View){
-        if (!ok6) {
-            view.txt6.visibility = View.VISIBLE
-            view.btn6.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn6.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok6 = true
-        } else {
-            txt6.visibility = View.GONE
-            btn6.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn6.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok6 = false
-        }
-
-    }
-    private fun btn7OnClickListener(view: View){
-        if (!ok7) {
-            view.txt7.visibility = View.VISIBLE
-            view.btn7.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn7.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok7 = true
-        } else {
-            txt7.visibility = View.GONE
-            btn7.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn7.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok7 = false
-        }
-
-    }
-    private fun btn8OnClickListener(view: View){
-        if (!ok8) {
-            view.txt8.visibility = View.VISIBLE
-            view.btn8.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn8.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok8 = true
-        } else {
-            txt8.visibility = View.GONE
-            btn8.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn8.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok8 = false
-        }
-
-    }
-    private fun btn9OnClickListener(view: View){
-        if (!ok9) {
-            view.txt9.visibility = View.VISIBLE
-            view.btn9.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.icon,
-                resources.newTheme()
-            )
-            btn9.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok9 = true
-        } else {
-            txt9.visibility = View.GONE
-            btn9.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn9.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok9 = false
-        }
-
-    }
-    private fun btn10OnClickListener(view: View){
-        if (!ok10) {
-            view.txt10.visibility = View.VISIBLE
-            view.btn10.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tuyuq,
-                resources.newTheme()
-            )
-            btn10.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok10 = true
-        } else {
-            txt10.visibility = View.GONE
-            btn10.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn10.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok10 = false
-        }
-
-    }
-    private fun btn11OnClickListener(view: View){
-        if (!ok11) {
-            view.txt11.visibility = View.VISIBLE
-            view.btn11.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tuyuq,
-                resources.newTheme()
-            )
-            btn11.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok11 = true
-        } else {
-            txt11.visibility = View.GONE
-            btn11.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn11.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok11 = false
-        }
-
-    }
-    private fun btn12OnClickListener(view: View){
-        if (!ok12) {
-            view.txt12.visibility = View.VISIBLE
-            view.btn12.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tuyuq,
-                resources.newTheme()
-            )
-            btn12.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok12 = true
-        } else {
-            txt12.visibility = View.GONE
-            btn12.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn12.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok12 = false
-        }
-
-    }
-    private fun btn13OnClickListener(view: View){
-        if (!ok13) {
-            view.txt13.visibility = View.VISIBLE
-            view.btn13.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tuyuq,
-                resources.newTheme()
-            )
-            btn13.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok13 = true
-        } else {
-            txt13.visibility = View.GONE
-            btn13.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn13.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok13 = false
-        }
-
-    }
-    private fun btn14OnClickListener(view: View){
-        if (!ok14) {
-            view.txt14.visibility = View.VISIBLE
-            view.btn14.setBackgroundResource(R.drawable.shape_knopka4)
-            val drawable1 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tepaga,
-                resources.newTheme()
-            )
-            val drawable2 = VectorDrawableCompat.create(
-                resources,
-                R.drawable.tuyuq,
-                resources.newTheme()
-            )
-            btn14.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                drawable2,
-                null,
-                drawable1,
-                null
-            )
-            ok14 = true
-        } else {
-            txt14.visibility = View.GONE
-            btn14.setBackgroundResource(R.drawable.shape_knopka3)
-            val drawable =
-                VectorDrawableCompat.create(resources, R.drawable.pastga, resources.newTheme())
-            btn14.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                null,
-                null,
-                drawable,
-                null
-            )
-            ok14 = false
+           boolean = false
         }
 
     }

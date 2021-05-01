@@ -6,8 +6,8 @@ import com.bizmiz.alishernavoiy.data.model.Navoiy
 
 @Dao
 interface NavoiyDao {
-    @Query("SELECT * FROM navoiy  WHERE id=1")
-    fun getId1(): Navoiy
+    @Query("SELECT * FROM navoiy  WHERE id=:id")
+    fun getId(id:Int): Navoiy
     @Query("SELECT * FROM navoiy  WHERE id=29")
     fun getId2(): Navoiy
     @Query("SELECT * FROM navoiy  WHERE id=15")
