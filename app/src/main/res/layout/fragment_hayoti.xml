@@ -29,26 +29,28 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/btnMinus"
+            android:id="@+id/h_minus"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="8dp"
             android:src="@drawable/minus"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/btnPlus"
+            android:id="@+id/h_plus"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="8dp"
             android:src="@drawable/plus"
-            app:layout_constraintEnd_toStartOf="@id/btnMinus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/h_minus"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <Button
-            android:id="@+id/back"
+            android:id="@+id/h_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
@@ -77,7 +79,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:textIsSelectable="true"
                 android:id="@+id/hayoti_ijodi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -89,6 +90,7 @@
                 android:gravity="clip_horizontal"
                 android:padding="10dp"
                 android:textColor="@color/black"
+                android:textIsSelectable="true"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
