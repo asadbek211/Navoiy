@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/fon_rangi"
     android:layout_height="match_parent"
+    android:background="@color/fon_rangi"
     tools:context=".GazalMatniActivity">
 
 
@@ -45,39 +45,47 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_marginEnd="5dp"
-            android:id="@+id/btnMinus"
+            android:id="@+id/g_minus"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginTop="8dp"
             android:padding="8dp"
             android:src="@drawable/minus"
-            app:layout_constraintEnd_toStartOf="@+id/qoshiq"
+            app:layout_constraintEnd_toStartOf="@+id/l_music"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/btnPlus"
+            android:id="@+id/g_plus"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginTop="8dp"
             android:padding="8dp"
             android:src="@drawable/plus"
-            app:layout_constraintEnd_toStartOf="@id/btnMinus"
+            app:layout_constraintEnd_toStartOf="@id/g_minus"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/ortga"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:layout_marginEnd="8dp"
-            android:id="@+id/qoshiq"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/library_music"
+        <RelativeLayout
+            android:id="@+id/l_music"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/fon_rangi2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintTop_toTopOf="@+id/title" />
+            app:layout_constraintTop_toTopOf="@+id/title"
+            app:layout_constraintVertical_bias="0.5">
+
+            <Button
+                android:id="@+id/music"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/play" />
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -85,24 +93,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/gazal_matni"
-                android:layout_marginBottom="15dp"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:padding="10dp"
-                android:gravity="clip_horizontal"
-                android:background="@drawable/shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape"
+                android:gravity="clip_horizontal"
+                android:padding="10dp"
                 android:text=""
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 

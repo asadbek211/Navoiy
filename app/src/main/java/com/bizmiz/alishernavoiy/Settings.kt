@@ -8,7 +8,8 @@ class Settings(context: Context) {
         const val TEXT_SIZE = "TextSize"
     }
 
-    private val prefs = context.getSharedPreferences("${context.packageName}.settings", Context.MODE_PRIVATE)
+    private val prefs =
+        context.getSharedPreferences("${context.packageName}.settings", Context.MODE_PRIVATE)
 
     fun changeAppMode() {
         if (isAppDarkMode()) {
@@ -18,17 +19,17 @@ class Settings(context: Context) {
         }
     }
 
-    fun isAppDarkMode() : Boolean = prefs.getBoolean(DARK_MODE, false)
+    fun isAppDarkMode(): Boolean = prefs.getBoolean(DARK_MODE, false)
 
     fun decrementTextSize() {
-        prefs.edit().putFloat(TEXT_SIZE, getTextSize()-2).apply()
+        prefs.edit().putFloat(TEXT_SIZE, getTextSize() - 2).apply()
     }
 
     fun incrementTextSize() {
-        prefs.edit().putFloat(TEXT_SIZE, getTextSize()+2).apply()
+        prefs.edit().putFloat(TEXT_SIZE, getTextSize() + 2).apply()
     }
 
-    fun getTextSize() : Float {
+    fun getTextSize(): Float {
         return prefs.getFloat(TEXT_SIZE, 18f)
     }
 }

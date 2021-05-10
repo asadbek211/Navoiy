@@ -11,5 +11,7 @@ data class Navoiy(
         @ColumnInfo(name = "nomi")
         val nomi: String,
         @ColumnInfo(name = "qiymat")
-        val qiymat: String
+        val qiymat: String ,
+        @ColumnInfo(name = "type")
+        val type: String
 )

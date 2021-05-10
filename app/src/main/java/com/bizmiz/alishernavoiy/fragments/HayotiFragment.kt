@@ -1,10 +1,10 @@
-package com.bizmiz.alishernavoiy.Fragments
+package com.bizmiz.alishernavoiy.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.bizmiz.alishernavoiy.NavoiyDatabase
 import com.bizmiz.alishernavoiy.OnTextSizeChangeListener
 import com.bizmiz.alishernavoiy.R
@@ -23,17 +23,17 @@ class HayotiFragment : Fragment(), OnTextSizeChangeListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_hayoti, container, false)
         view.hayoti_ijodi.text = NavoiyDatabase.getInstance(requireContext()).dao().getId(1).qiymat
-        view.back.setOnClickListener { requireActivity().finish() }
+        view.h_back.setOnClickListener { requireActivity().finish() }
 
         settings = Settings(requireContext())
         view.hayoti_ijodi.textSize = settings.getTextSize()
-        view.btnMinus.setOnClickListener {
+        view.h_minus.setOnClickListener {
             if (settings.getTextSize() > 12) {
                 settings.decrementTextSize()
                 onTextSizeChanged(settings.getTextSize())
             }
         }
-        view.btnPlus.setOnClickListener {
+        view.h_plus.setOnClickListener {
             if (settings.getTextSize() < 32) {
                 settings.incrementTextSize()
                 onTextSizeChanged(settings.getTextSize())

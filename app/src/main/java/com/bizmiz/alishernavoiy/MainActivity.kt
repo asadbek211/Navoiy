@@ -1,6 +1,7 @@
 package com.bizmiz.alishernavoiy
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
     fun OnClick(id: View) {
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun dasturHaqida() {
         val message = AlertDialog.Builder(this);
         message.setTitle("Dastur Haqida")
-            .setMessage(NavoiyDatabase.getInstance(this).dao().getId2().qiymat)
+            .setMessage(NavoiyDatabase.getInstance(this).dao().getId(29).qiymat)
             .setCancelable(false)
             .setPositiveButton("Yopish") { message, _ ->
                 message.dismiss()
