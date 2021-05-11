@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Alisher Navoiy</string>
     <string name="hayoti_ijodi">Hayoti va ijodi</string>
-    <string name="gazallari">G\'azallari</string>
-    <string name="ruboiy_va_tuyuqlari">Ruboiy va tuyuqlari</string>
+    <string name="gazallari">G\'azallar</string>
+    <string name="ruboiy_va_tuyuqlari">Ruboiy va tuyuqlar</string>
     <string name="lison_ut_tayr">Lison Ut-Tayr(Qush tili)</string>
     <string name="xamsa">Xamsa</string>
     <string name="g_urbatda_g_arib">G\'URBATDA G\'ARIB…</string>
