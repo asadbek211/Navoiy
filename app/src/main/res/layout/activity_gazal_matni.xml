@@ -30,60 +30,80 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <ImageView
+            android:scaleType="center"
             android:id="@+id/ortga"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/arrow_back"
+            android:src="@drawable/arrow_back"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/title"
             app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
-            android:id="@+id/g_minus"
+            android:id="@+id/music"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:padding="8dp"
-            android:src="@drawable/minus"
-            app:layout_constraintEnd_toStartOf="@+id/l_music"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/g_plus"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:padding="8dp"
-            android:src="@drawable/plus"
-            app:layout_constraintEnd_toStartOf="@id/g_minus"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:scaleType="center"
+            android:src="@drawable/play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.90"
             app:layout_constraintStart_toEndOf="@+id/ortga"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:id="@+id/l_music"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/fon_rangi2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title"
-            app:layout_constraintVertical_bias="0.5">
+        <LinearLayout
+            android:id="@+id/l_contener"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_yarim"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/music"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45">
 
-            <Button
-                android:id="@+id/music"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/play" />
-        </RelativeLayout>
+            <ImageView
+                android:paddingStart="15dp"
+                android:scaleType="center"
+                android:id="@+id/g_tugma"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_arrow2"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/g_plus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:foregroundGravity="center"
+                android:padding="8dp"
+                android:src="@drawable/ic_plus" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/g_shrift"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textColor="@color/fon_rangi2"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/g_minus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:foregroundGravity="center"
+                android:padding="8dp"
+                android:src="@drawable/ic_minus"
+                android:layout_marginEnd="10dp"/>
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView

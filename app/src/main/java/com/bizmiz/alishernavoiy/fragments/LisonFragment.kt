@@ -1,5 +1,7 @@
 package com.bizmiz.alishernavoiy.fragments
 
+import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_lison.view.*
 class LisonFragment : Fragment(), OnTextSizeChangeListener {
     private lateinit var settings: Settings
     private var i = 1
+    private var boolean = true
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,18 +25,24 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
         val view = inflater.inflate(R.layout.fragment_lison, container, false)
         view.qism.text = "${i}/12"
         view.l_back.setOnClickListener { requireActivity().finish() }
+        view.l_tugma.setOnClickListener {
+            menuAnim(view)
+        }
         settings = Settings(requireContext())
         view.lison_matni.textSize = settings.getTextSize()
+        view.l_shrift.text = settings.getTextSize().toInt().toString()
         view.l_minus.setOnClickListener {
             if (settings.getTextSize() > 12) {
                 settings.decrementTextSize()
                 onTextSizeChanged(settings.getTextSize())
+                view.l_shrift.text = settings.getTextSize().toInt().toString()
             }
         }
         view.l_plus.setOnClickListener {
             if (settings.getTextSize() < 32) {
                 settings.incrementTextSize()
                 onTextSizeChanged(settings.getTextSize())
+                view.l_shrift.text = settings.getTextSize().toInt().toString()
             }
         }
         view.lison_matni.text = NavoiyDatabase.getInstance(requireContext()).dao().getId(30).qiymat
@@ -70,5 +79,30 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
 
     override fun onTextSizeChanged(size: Float) {
         lison_matni.textSize = size
+    }
+
+    private fun menuAnim(view: View) {
+        if (boolean) {
+            ObjectAnimator.ofFloat(
+                view.l_contener,
+                "translationX",
+                pxFromDp(requireContext(), -95f)
+            ).apply {
+                duration = 500
+                start()
+            }
+            boolean = false
+        } else {
+            ObjectAnimator.ofFloat(view.l_contener, "translationX", pxFromDp(requireContext(), 0f))
+                .apply {
+                    duration = 500
+                    start()
+                }
+            boolean = true
+        }
+    }
+
+    private fun pxFromDp(context: Context, dp: Float): Float {
+        return dp * context.resources.displayMetrics.density
     }
 }

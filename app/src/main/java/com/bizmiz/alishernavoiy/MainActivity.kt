@@ -67,10 +67,10 @@ class MainActivity : AppCompatActivity() {
         message.setTitle("Dasturdan chiqish")
             .setMessage("Dasturdan chiqmoqchimisiz?")
             .setCancelable(false)
-            .setPositiveButton("Yo'q") { message, _ ->
-                message.dismiss()
-            }.setNegativeButton("Ha") { message, _ ->
+            .setPositiveButton("Ha") { message, _ ->
                 finish()
+            }.setNegativeButton("Yo'q") { message, _ ->
+                message.dismiss()
             }
             .create().show()
     }
