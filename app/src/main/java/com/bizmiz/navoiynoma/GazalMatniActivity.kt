@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy
+package com.bizmiz.navoiynoma
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -6,16 +6,20 @@ import android.content.pm.ActivityInfo
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
 import kotlinx.android.synthetic.main.activity_gazal_matni.*
 
 class GazalMatniActivity : AppCompatActivity() {
     var boolean = true
     private lateinit var settings: Settings
+    private lateinit var dao: NavoiyDao
+    private lateinit var navoiyPresenter: NavoiyPresenter
     private var check = false
     private var mediaPlayer = MediaPlayer()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gazal_matni)
+        navoiyPresenter = NavoiyPresenter(dao)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         settings = Settings(this)
         gazal_matni.textSize = settings.getTextSize()
@@ -26,7 +30,7 @@ class GazalMatniActivity : AppCompatActivity() {
             music.isEnabled = false
             music.setImageResource(R.drawable.play_back)
         }
-        gazal_matni.text = key?.let { NavoiyDatabase.getInstance(this).dao().getId(it).qiymat }
+        gazal_matni.text = navoiyPresenter.getId(key!!.toInt()).toString()
         g_tugma.setOnClickListener {
             menuAnim()
         }

@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy
+package com.bizmiz.navoiynoma
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -6,11 +6,15 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var dao: NavoiyDao
+    private lateinit var navoiyPresenter: NavoiyPresenter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        navoiyPresenter = NavoiyPresenter(dao)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
@@ -50,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun dasturHaqida() {
         val message = AlertDialog.Builder(this);
         message.setTitle("Dastur Haqida")
-            .setMessage(NavoiyDatabase.getInstance(this).dao().getId(29).qiymat)
+            .setMessage(navoiyPresenter.getId(29).toString())
             .setCancelable(false)
             .setPositiveButton("Yopish") { message, _ ->
                 message.dismiss()

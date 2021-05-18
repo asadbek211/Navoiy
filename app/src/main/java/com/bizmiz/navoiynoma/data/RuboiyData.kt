@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.data
+package com.bizmiz.navoiynoma.data
 
 import androidx.room.Ignore
 

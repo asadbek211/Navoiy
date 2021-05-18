@@ -1,8 +1,8 @@
-package com.bizmiz.alishernavoiy.data.dao
+package com.bizmiz.navoiynoma.data.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.bizmiz.alishernavoiy.data.model.Navoiy
+import com.bizmiz.navoiynoma.data.model.Navoiy
 
 @Dao
 interface NavoiyDao {

@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.fragments
+package com.bizmiz.navoiynoma.fragments
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -8,17 +8,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bizmiz.alishernavoiy.Adapters.RuboiyAdapter
-import com.bizmiz.alishernavoiy.NavoiyDatabase
-import com.bizmiz.alishernavoiy.OnTextSizeChangeListener
-import com.bizmiz.alishernavoiy.R
-import com.bizmiz.alishernavoiy.Settings
-import com.bizmiz.alishernavoiy.data.RuboiyData
+import com.bizmiz.navoiynoma.*
+import com.bizmiz.navoiynoma.Adapters.RuboiyAdapter
+import com.bizmiz.navoiynoma.data.RuboiyData
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
 import kotlinx.android.synthetic.main.fragment_ruboiy.view.*
 
 class RuboiyFragment : Fragment(), OnTextSizeChangeListener {
     var boolean = true
     private lateinit var settings: Settings
+    private lateinit var dao: NavoiyDao
+    private lateinit var navoiyPresenter: NavoiyPresenter
     private val adapter = RuboiyAdapter()
     override fun onCreateView(
 
@@ -28,6 +28,7 @@ class RuboiyFragment : Fragment(), OnTextSizeChangeListener {
         val view = inflater.inflate(R.layout.fragment_ruboiy, container, false)
         requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         settings = Settings(requireContext())
+        navoiyPresenter = NavoiyPresenter(dao)
         view.r_shrift.text = settings.getTextSize().toInt().toString()
         view.r_tugma.setOnClickListener {
             menuAnim(view)
@@ -56,14 +57,14 @@ class RuboiyFragment : Fragment(), OnTextSizeChangeListener {
 
     }
 
-    private fun setData() {
+     fun setData() {
         var list: MutableList<RuboiyData> = mutableListOf()
         for (i in 15..28) {
             list.add(
                 RuboiyData(
-                    NavoiyDatabase.getInstance(requireContext()).dao().getId(i).nomi,
-                    NavoiyDatabase.getInstance(requireContext()).dao().getId(i).qiymat,
-                    NavoiyDatabase.getInstance(requireContext()).dao().getId(i).type
+                    navoiyPresenter.getIdByNumber(i,1).toString(),
+                    navoiyPresenter.getIdByNumber(i,2).toString(),
+                    navoiyPresenter.getIdByNumber(i,3).toString()
                 )
             )
         }

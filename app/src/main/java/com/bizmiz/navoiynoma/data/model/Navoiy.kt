@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.data.model
+package com.bizmiz.navoiynoma.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

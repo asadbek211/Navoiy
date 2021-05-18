@@ -1,11 +1,11 @@
-package com.bizmiz.alishernavoiy
+package com.bizmiz.navoiynoma
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.bizmiz.alishernavoiy.data.dao.NavoiyDao
-import com.bizmiz.alishernavoiy.data.model.Navoiy
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
+import com.bizmiz.navoiynoma.data.model.Navoiy
 
 @Database(entities = [Navoiy::class], version = 1)
 abstract class NavoiyDatabase : RoomDatabase() {

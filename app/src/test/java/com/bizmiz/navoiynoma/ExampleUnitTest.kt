@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy
+package com.bizmiz.navoiynoma
 
 import org.junit.Test
 

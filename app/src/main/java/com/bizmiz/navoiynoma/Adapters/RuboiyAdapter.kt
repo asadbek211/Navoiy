@@ -1,13 +1,13 @@
-package com.bizmiz.alishernavoiy.Adapters
+package com.bizmiz.navoiynoma.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
-import com.bizmiz.alishernavoiy.R
-import com.bizmiz.alishernavoiy.Settings
-import com.bizmiz.alishernavoiy.data.RuboiyData
+import com.bizmiz.navoiynoma.R
+import com.bizmiz.navoiynoma.Settings
+import com.bizmiz.navoiynoma.data.RuboiyData
 import kotlinx.android.synthetic.main.ruboiy_item.view.*
 
 class RuboiyAdapter : RecyclerView.Adapter<RuboiyAdapter.MyViewHolder>() {

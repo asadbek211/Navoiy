@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.fragments
+package com.bizmiz.navoiynoma.fragments
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -7,15 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bizmiz.alishernavoiy.NavoiyDatabase
-import com.bizmiz.alishernavoiy.OnTextSizeChangeListener
-import com.bizmiz.alishernavoiy.R
-import com.bizmiz.alishernavoiy.Settings
+import com.bizmiz.navoiynoma.*
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
 import kotlinx.android.synthetic.main.fragment_xamsa.*
 import kotlinx.android.synthetic.main.fragment_xamsa.view.*
 
 class XamsaFragment : Fragment(), OnTextSizeChangeListener {
     private lateinit var settings: Settings
+    private lateinit var dao: NavoiyDao
+    private lateinit var navoiyPresenter: NavoiyPresenter
     private var i = 1
     private var boolean = true
     override fun onCreateView(
@@ -29,6 +29,7 @@ class XamsaFragment : Fragment(), OnTextSizeChangeListener {
             menuAnim(view)
         }
         settings = Settings(requireContext())
+        navoiyPresenter = NavoiyPresenter(dao)
         view.xamsa_matni.textSize = settings.getTextSize()
         view.x_shrift.text = settings.getTextSize().toInt().toString()
         view.x_minus.setOnClickListener {
@@ -45,7 +46,7 @@ class XamsaFragment : Fragment(), OnTextSizeChangeListener {
                 view.x_shrift.text = settings.getTextSize().toInt().toString()
             }
         }
-        view.xamsa_matni.text = NavoiyDatabase.getInstance(requireContext()).dao().getId(42).qiymat
+        view.xamsa_matni.text = navoiyPresenter.getId(42).toString()
         if (i == 1) {
             view.x_previous.isEnabled = false
             view.x_previous.setBackgroundResource(R.drawable.ic_previous_false)
@@ -59,7 +60,7 @@ class XamsaFragment : Fragment(), OnTextSizeChangeListener {
             }
             view.x_qism.text = "${i + 1}/6"
             view.xamsa_matni.text =
-                NavoiyDatabase.getInstance(requireContext()).dao().getId(42 + i).qiymat
+                navoiyPresenter.getId(42+i).toString()
             i++
         }
         view.x_previous.setOnClickListener {
@@ -71,7 +72,7 @@ class XamsaFragment : Fragment(), OnTextSizeChangeListener {
             }
             view.x_qism.text = "${i - 1}/6"
             view.xamsa_matni.text =
-                NavoiyDatabase.getInstance(requireContext()).dao().getId(40 + i).qiymat
+                navoiyPresenter.getId(42+i).toString()
             i--
         }
         return view

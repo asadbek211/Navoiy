@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.fragments
+package com.bizmiz.navoiynoma.fragments
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bizmiz.alishernavoiy.GazalMatniActivity
-import com.bizmiz.alishernavoiy.R
+import com.bizmiz.navoiynoma.GazalMatniActivity
+import com.bizmiz.navoiynoma.R
 import kotlinx.android.synthetic.main.fragment_gazal.view.*
 
 class GazalFragment : Fragment() {

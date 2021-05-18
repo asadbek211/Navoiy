@@ -1,8 +1,8 @@
-package com.bizmiz.alishernavoiy
+package com.bizmiz.navoiynoma
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.bizmiz.alishernavoiy.fragments.*
+import com.bizmiz.navoiynoma.fragments.*
 
 class ConteinerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

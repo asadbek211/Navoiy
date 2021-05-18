@@ -1,4 +1,4 @@
-package com.bizmiz.alishernavoiy.fragments
+package com.bizmiz.navoiynoma.fragments
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -7,15 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bizmiz.alishernavoiy.NavoiyDatabase
-import com.bizmiz.alishernavoiy.OnTextSizeChangeListener
-import com.bizmiz.alishernavoiy.R
-import com.bizmiz.alishernavoiy.Settings
+import com.bizmiz.navoiynoma.*
+import com.bizmiz.navoiynoma.data.dao.NavoiyDao
 import kotlinx.android.synthetic.main.fragment_lison.*
 import kotlinx.android.synthetic.main.fragment_lison.view.*
 
 class LisonFragment : Fragment(), OnTextSizeChangeListener {
     private lateinit var settings: Settings
+    private lateinit var dao: NavoiyDao
+    private lateinit var navoiyPresenter: NavoiyPresenter
     private var i = 1
     private var boolean = true
     override fun onCreateView(
@@ -29,6 +29,7 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
             menuAnim(view)
         }
         settings = Settings(requireContext())
+        navoiyPresenter = NavoiyPresenter(dao)
         view.lison_matni.textSize = settings.getTextSize()
         view.l_shrift.text = settings.getTextSize().toInt().toString()
         view.l_minus.setOnClickListener {
@@ -45,7 +46,7 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
                 view.l_shrift.text = settings.getTextSize().toInt().toString()
             }
         }
-        view.lison_matni.text = NavoiyDatabase.getInstance(requireContext()).dao().getId(30).qiymat
+        view.lison_matni.text = navoiyPresenter.getId(30).toString()
         if (i == 1) {
             view.previous.isEnabled = false
             view.previous.setBackgroundResource(R.drawable.ic_previous_false)
@@ -59,7 +60,7 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
             }
             view.qism.text = "${i + 1}/12"
             view.lison_matni.text =
-                NavoiyDatabase.getInstance(requireContext()).dao().getId(30 + i).qiymat
+                navoiyPresenter.getId(30+i).toString()
             i++
         }
         view.previous.setOnClickListener {
@@ -71,7 +72,7 @@ class LisonFragment : Fragment(), OnTextSizeChangeListener {
             }
             view.qism.text = "${i - 1}/12"
             view.lison_matni.text =
-                NavoiyDatabase.getInstance(requireContext()).dao().getId(28 + i).qiymat
+                navoiyPresenter.getId(28+i).toString()
             i--
         }
         return view
